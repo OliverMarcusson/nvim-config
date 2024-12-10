@@ -12,9 +12,14 @@ return {
       require "configs.lspconfig"
     end,
   },
+  -- {
+  --   'Exafunction/codeium.vim',
+  --   event = 'BufEnter'
+  -- },
   {
-    'Exafunction/codeium.vim',
-    event = 'BufEnter'
+    'numToStr/Comment.nvim',
+    config = {},
+    opts = {}
   },
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
