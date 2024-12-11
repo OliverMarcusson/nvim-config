@@ -7,6 +7,16 @@ return {
 
   -- These are some examples, uncomment them if you want to see them work!
   {
+    "williamboman/mason.nvim",
+    opts = {}
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = {
+      ensure_installed = require "configs.servers"
+    }
+  },
+  {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
@@ -18,7 +28,6 @@ return {
   -- },
   {
     'numToStr/Comment.nvim',
-    config = {},
     opts = {}
   },
   -- {
