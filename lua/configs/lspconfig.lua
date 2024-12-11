@@ -17,10 +17,13 @@ for _, lsp in ipairs(servers) do
 end
 
 lspconfig.rust_analyzer.setup{
+  on_attach = function (client, bufnr)
+    vim.lsp.inlay_hint.enable(true, { bufnr = bufnr})
+  end,
   settings = {
     ['rust-analyzer'] = {
       diagnostics = {
-        enable = false;
+        enable = true;
       }
     }
   }
